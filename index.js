@@ -23,7 +23,7 @@ app.use('/contact', contactRouter)
 
 app.get('/', (req, res) => {
     res.json({ 
-        msg: "Welcome to Pinkay and Kuro backend API, below will show you how to use it.",
+        msg: "Welcome to Pinkay and Kuro backend API (≧ω<)人(ゝω≦）, below will show you how to use it.",
         Users: {
             getUsers: "GET /users",
             getSingleUser: "GET /users/:id",
