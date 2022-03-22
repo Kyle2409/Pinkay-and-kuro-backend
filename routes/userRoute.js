@@ -22,7 +22,7 @@ res.send(res.user);
 });
 
 // SIGN-IN user with email & password
-router.patch("/", async (req, res, next) => {
+router.post("/signin", async (req, res, next) => {
 const { email, password } = req.body;
 const user = await User.findOne({ email });
 
@@ -43,7 +43,7 @@ if (await bcrypt.compare(password, user.password)) {
 });
 
 // REGISTER user (works)
-router.post("/", async (req, res, next) => {
+router.post("/signup", async (req, res, next) => {
 const { name, email, contact, password } = req.body;
 
 const salt = await bcrypt.genSalt();

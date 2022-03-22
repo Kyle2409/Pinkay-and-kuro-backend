@@ -1,4 +1,4 @@
-// require('dotenv').config()
+require('dotenv').config()
 
 const express = require('express')
 const cors = require('cors')
@@ -27,8 +27,8 @@ app.get('/', (req, res) => {
         Users: {
             getUsers: "GET /users",
             getSingleUser: "GET /users/:id",
-            registerUser: "POST /users",
-            signInUser: "PATCH /users",
+            registerUser: "POST /users/signup",
+            signInUser: "POST /users/signin",
             updateUser: "PUT /users/:id",
             deleteUser: "DELETE /users/:id"
         },
